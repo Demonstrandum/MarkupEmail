@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'markup_email'
 
 class String
   def arg?
@@ -9,17 +10,68 @@ end
 if '-h'.arg? || '--help'.arg? || 'help'.arg?
   help = <<EOF
 
+Basic usage:
+  markup-email [markup file] [options]
+  e.g. `markup-email email.rst`
+
 Your chosen markdown requires these packages accordingly:
--  markdown, .mdown, .mkdn, .md -- `gem install commonmarker`` (https://github.com/gjtorikian/commonmarker)
--  textile -- `gem install RedCloth`
--  rdoc -- `gem install rdoc -v 3.6.1`
--  org -- `gem install org-ruby`
--  creole -- `gem install creole`
--  mediawiki, .wiki -- `gem install wikicloth`
--  rst -- `python3 -m pip install sphinx`
--  asciidoc, .adoc, .asc -- `gem install asciidoctor` (http://asciidoctor.org)
--  pod -- Pod::Simple::XHTML comes with Perl >= 5.10. Lower versions should install Pod::Simple from CPAN.
+-   .markdown, .mdown, .mkdn, .md -- `gem install commonmarker`
+-   .textile -- `gem install RedCloth`
+-   .rdoc -- `gem install rdoc -v 3.6.1`
+-   .org -- `gem install org-ruby`
+-   .creole -- `gem install creole`
+-   .mediawiki, .wiki -- `gem install wikicloth`
+-   .rst -- `python3 -m pip install sphinx`
+-   .asciidoc, .adoc, .asc -- `gem install asciidoctor`
+-   .pod -- Pod::Simple::XHTML comes with Perl >= 5.10.
 
 EOF
   puts help
+  exit 0
 end
+
+sanitize = false
+if '-s'.arg? || '--sanitize'.arg?
+  sanitize = true
+end
+
+allowed_files = %w{
+  markdown mdown mkdn md
+  textile
+  rdoc
+  org
+  creole
+  mediawiki wiki
+  rst
+  asciidoc adoc asc
+  pod
+}
+
+file = String.new
+ARGV.each do |arg|
+  if allowed_files.include? arg.split('.')[-1]
+    file = arg
+    break
+  end
+end
+
+if file.empty? || !File.exist?(file)
+  puts "\nNot a markup file or the file does not exist!\nSee --help for more information."
+  exit 1
+end
+
+title = ARGV[ARGV.index('-t') + 1] unless ARGV.index('-t').nil?
+title = ARGV[ARGV.index('--title') + 1] unless ARGV.index('--title').nil?
+title = String.new if title.nil?
+puts "\nFilename and title not set,\na logical filename shall be chosen for you.\nPerhaps see `--help` for information." if title.empty?
+puts "\nTitle is    : #{title}\nFilename is : #{title}.html\n" unless title.empty?
+
+if sanitize
+  puts "\nMarkup/HTML will be sanitized,\n(`class="..."` attributes and <script> tags will be disalowed)."
+else
+  puts "\nMarkup/HTML will NOT be sanitized, this might be dangerous!\nType `--help` fore more information."
+end
+puts
+
+filename = title.empty? ? String.new : "#{title}.html"
+MarkupEmail::Convert.new(file, title, sanitize).write filename
