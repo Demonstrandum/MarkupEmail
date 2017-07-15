@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+class String
+  def arg?
+    ARGV.include? self
+  end
+end
+
+if '-h'.arg? || '--help'.arg? || 'help'.arg?
+  help = <<EOF
+
+Your chosen markdown requires these packages accordingly:
+-  markdown, .mdown, .mkdn, .md -- `gem install commonmarker`` (https://github.com/gjtorikian/commonmarker)
+-  textile -- `gem install RedCloth`
+-  rdoc -- `gem install rdoc -v 3.6.1`
+-  org -- `gem install org-ruby`
+-  creole -- `gem install creole`
+-  mediawiki, .wiki -- `gem install wikicloth`
+-  rst -- `python3 -m pip install sphinx`
+-  asciidoc, .adoc, .asc -- `gem install asciidoctor` (http://asciidoctor.org)
+-  pod -- Pod::Simple::XHTML comes with Perl >= 5.10. Lower versions should install Pod::Simple from CPAN.
+
+EOF
+  puts help
+end
