@@ -8,6 +8,7 @@ require 'rouge'
 module MarkupEmail
   class HTMLify
     attr_accessor :title
+    attr_reader :content
     def initialize content
       @content = content
     end
@@ -52,10 +53,7 @@ HTML
 <meta name="viewport" content="width=device-width, initial-scale=1">
 HTML
 
-      #
       @content = document.to_s
     end
-
-    def content; @content; end
   end
 end
