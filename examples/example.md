@@ -4,11 +4,35 @@ Markdown: Syntax
 A quote
 > Quote
 
+just like an e-mail quote:
+```
+> Quote
+```
+
+
 An image
 ![mandelbrot-fractal](https://user-images.githubusercontent.com/26842759/27105899-2586bd88-5089-11e7-9a01-3e3fdb419a38.png)
+the markdown is:
+```
+![mandelbrot-fractal](https://user-images.githubusercontent.com/26842759/27105899-2586bd88-5089-11e7-9a01-3e3fdb419a38.png)
+```
+
 
 A LINK to the image
 [mandelbrot-fractal](https://user-images.githubusercontent.com/26842759/27105899-2586bd88-5089-11e7-9a01-3e3fdb419a38.png)
+
+just without an `!`:
+```
+[mandelbrot-fractal](https://user-images.githubusercontent.com/26842759/27105899-2586bd88-5089-11e7-9a01-3e3fdb419a38.png)
+```
+
+Emojis are also supported, should you need them
+This guy :arrow_right: :smiley: is feeling :100:% today! - :+1:
+written like this:
+`This guy :arrow_right: :smiley: is feeling :100:% today! - :+1:`
+For all the emoji codes, see [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/) :shipit:
+<br />
+
 
 Some code:
 ```html
@@ -16,6 +40,16 @@ Some code:
   <!-- Favourite websites, appended in js -->
 </div>
 ```
+Written like this:
+```
+```html
+<div class="slider">
+  <!-- Favourite websites, appended in js -->
+</div>
+̀ ̀ ̀
+```
+
+Nice syntax highlighting:
 ```javascript
 import metalsmith from 'metalsmith'
 import markdown from 'metalsmith-github-markdown';
@@ -59,6 +93,23 @@ Markdown | Less | Pretty
 --- | --- | ---
 *Still* | `renders` | **nicely**
 1 | 2 | 3
+
+Made like so:
+```
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+```
 
 # THE WISE WORDS
 
