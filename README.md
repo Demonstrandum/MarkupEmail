@@ -24,9 +24,9 @@ Options:
 
 | Option                | Description   |    
 | ----------------------|:-------------:|
-| -s, --sanitize        | Sanitizes all html/markdown by removing potentialy harmful tags or their attributes        |
+| -s, --sanitize        | Sanitizes all html/markdown by removing potentially harmful tags or their attributes        |
 | -t, --title           | The subsequent word/argument will be set as the title                                   |
-| -h, --help, help      | Brings up the help menu (same as this)  |
+| -h, --help, help      | Brings up the help menu (similar as this)  |
 
 
 Your chosen markdown requires these packages accordingly:
