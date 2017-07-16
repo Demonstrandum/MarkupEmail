@@ -18,8 +18,8 @@ module MarkupEmail
     def body
       exit 1 unless package_tester
       unfiltered = File.read(@file) #GitHub::Markup.render @file, File.read(@file) # Use me :'(
-      # ^^^^^ IN THE FUTURE, WHEN `HTML::Pipeline` HAS FIXED THEIR SHIT AND DON'T
-      # ^^^^^ A HUNDRED YEAR OLD VERSION OF `github-linguist` I WILL BE ABLE TO
+      # ^^^^^ IN THE FUTURE, WHEN `HTML::Pipeline` HAS FIXED THEIR SHIT AND DON'T USE
+      # ^^^^^ A HUNDRED YEAR OLD VERSION OF `github-linguist` I WILL BE ABLE TO SUPPORT
       # ^^^^^ ALL THE MARKUPS LISTED IN THE `--help` SECTION...
       context = {
         :asset_root => "https://assets-cdn.github.com/images/icons",

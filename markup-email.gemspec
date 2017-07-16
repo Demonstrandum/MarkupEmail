@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'markup-email'
-  s.version     = '1.0.2'
+  s.version     = '1.0.3'
   s.required_ruby_version = '>= 1.9.2'
   s.executables << 'markup-email'
   s.add_runtime_dependency 'github-markup', '~> 1.6', '>= 1.6.0'
