@@ -12,7 +12,16 @@ if '-h'.arg? || '--help'.arg? || 'help'.arg?
 
 Basic usage:
   markup-email [markup file] [options]
-  e.g. `markup-email email.rst`
+  e.g. `markup-email email.md`
+
+Options:
+  -s, --sanitize    Sanitizes all html/markdown by removing
+                    potentialy harmful tags or their attributes
+
+  -t, --title       The subsequent word/argument will be set as
+                    the title
+
+  -h, --help, help  Brings up this menu.
 
 Your chosen markdown requires these packages accordingly:
 -   .markdown, .mdown, .mkdn, .md -- `gem install commonmarker`
