@@ -11,7 +11,7 @@
   </o:OfficeDocumentSettings>
 </xml>
 <![endif]-->
-<title></title>
+<title>example</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -717,7 +717,118 @@
   border-bottom-color: #eee;
 }
 
-          .c1,.cd,.cm,.cs,.markdown-body .c{color:#6a737d}.markdown-body .no,.markdown-body .s .v{color:#005cc5}.markdown-body .e,.markdown-body .en,.na,.nf,.nx{color:#6f42c1}.markdown-body .gh,.w{color:#24292e}.markdown-body .nt{color:#22863a}.highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv,.k,.kn,.kr,.markdown-body .n{color:#d73a49}.markdown-body .cce,.markdown-body .pds,.markdown-body .s,.markdown-body .s1,.markdown-body .sr,.markdown-body .sra,.markdown-body .sre,.s2{color:#032f62}.markdown-body .smw,.markdown-body .v{color:#e36209}.markdown-body .bu{color:#b31d28}.markdown-body .ii{color:#fafbfc;background-color:#b31d28}.markdown-body .c2{color:#fafbfc;background-color:#d73a49}.markdown-body .c2::before{content:"^M"}.markdown-body .sr .cce{font-weight:700;color:#22863a}.markdown-body .ml{color:#735c0f}.markdown-body .en,.markdown-body .mh,.markdown-body .ms{font-weight:700;color:#005cc5}.markdown-body .mi{font-style:italic;color:#24292e}.markdown-body .mb{font-weight:700;color:#24292e}.markdown-body .md{color:#b31d28;background-color:#ffeef0}.markdown-body .mi1{color:#22863a;background-color:#f0fff4}.markdown-body .mc{color:#e36209;background-color:#ffebda}.markdown-body .mi2{color:#f6f8fa;background-color:#005cc5}.markdown-body .mdr{font-weight:700;color:#6f42c1}.markdown-body .ba{color:#586069}.markdown-body .sg{color:#959da5}.markdown-body .corl{text-decoration:underline;color:#032f62}
+          .c1,.cd,.cm,.cs,.markdown-body .c {
+            color: #6a737d;
+          }
+
+          .markdown-body .no,.markdown-body .s, .nb, .v, .mi {
+            color: #005cc5;
+          }
+
+          .markdown-body .e,.markdown-body .en,.na,.nf,.nx {
+            color: #6f42c1;
+          }
+
+          .markdown-body .gh,.w {
+            color: #24292e;
+          }
+
+          .markdown-body .nt {
+            color: #22863a;
+          }
+
+          .highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv,.k,.kn,.kr,.markdown-body .o, .nb {
+            color: #d73a49;
+          }
+          .highlight-shell .o {
+            color: inherit;
+          }
+          .highlight-shell .nb {
+            color: #005cc5;
+          }
+
+          .markdown-body .cce,.markdown-body .pds,.markdown-body .s,.markdown-body .s1,.markdown-body .sr,.markdown-body .sra,.markdown-body .sre,.s2 {
+            color: #032f62;
+          }
+
+          .markdown-body .smw,.markdown-body .v {
+            color: #e36209;
+          }
+
+          .markdown-body .bu {
+            color: #b31d28;
+          }
+
+          .markdown-body .ii {
+            color: #fafbfc;
+            background-color: #b31d28;
+          }
+
+          .markdown-body .c2 {
+            color: #fafbfc;
+            background-color: #d73a49;
+          }
+
+          .markdown-body .c2::before {
+            content: "^M";
+          }
+
+          .markdown-body .sr .cce {
+            font-weight: 700;
+            color: #22863a;
+          }
+
+          .markdown-body .ml {
+            color: #735c0f;
+          }
+
+          .markdown-body .en,.markdown-body .mh,.markdown-body .ms {
+            font-weight: 700;
+            color: #005cc5;
+          }
+
+          .markdown-body .mb {
+            font-weight: 700;
+            color: #24292e;
+          }
+
+          .markdown-body .md {
+            color: #b31d28;
+            background-color: #ffeef0;
+          }
+
+          .markdown-body .mi1 {
+            color: #22863a;
+            background-color: #f0fff4;
+          }
+
+          .markdown-body .mc {
+            color: #e36209;
+            background-color: #ffebda;
+          }
+
+          .markdown-body .mi2 {
+            color: #f6f8fa;
+            background-color: #005cc5;
+          }
+
+          .markdown-body .mdr {
+            font-weight: 700;
+            color: #6f42c1;
+          }
+
+          .markdown-body .ba {
+            color: #586069;
+          }
+
+          .markdown-body .sg {
+            color: #959da5;
+          }
+
+          .markdown-body .corl {
+            text-decoration: underline;
+            color: #032f62;
+          }
         </style>
 
         <style>
@@ -741,11 +852,38 @@
           img {
             border-radius: 5px;
           }
+          a {
+            border-bottom: 1px solid rgba(3, 102, 214, 0.3);
+            transition: all .075s ease-in-out;
+          }
+          a:hover {
+            text-decoration: none !important;
+            border-bottom: 1px solid rgb(3, 102, 214);
+          }
+          .selected {
+            border-bottom: 1px solid #1c0ec4 !important;
+            text-decoration: none;
+            color: #1c0ec4 !important;
+            cursor: not-allowed;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+          .selected:hover {
+            border-bottom: 1px solid #1c0ec4 !important;
+            color: #1c0ec4 !important;
+            cursor: not-allowed;
+          }
+          .anchor {
+            border: none !important;
+          }
         </style>
 </head>
   <body>
     <article class="markdown-body"><h1>
-<a id="markdown-syntax" class="anchor" href="#markdown-syntax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Markdown: Syntax</h1>
+<a id="markdown-syntax" class="anchor" href="#markdown-syntax" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Markdown: Syntax</h1>
 <p>A quote</p>
 <blockquote>
 <p>Quote</p>
@@ -873,7 +1011,8 @@ Markdown | Less | Pretty
 
 </code></pre>
 <h1>
-<a id="the-wise-words" class="anchor" href="#the-wise-words" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>THE WISE WORDS</h1>
+<a id="the-wise-words" class="anchor" href="#the-wise-words" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>THE WISE WORDS</h1>
 <ul id="ProjectSubmenu" class="task-list">
     <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
     <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
@@ -922,9 +1061,11 @@ Markdown | Less | Pretty
 can <a href="/projects/markdown/syntax.text">see the source for it by adding '.text' to the URL</a>.</p>
 <hr>
 <h2 id="overview">
-<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
 <h3 id="philosophy">
-<a id="philosophy" class="anchor" href="#philosophy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Philosophy</h3>
+<a id="philosophy" class="anchor" href="#philosophy" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Philosophy</h3>
 <p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>
 <p>Readability, however, is emphasized above all else. A Markdown-formatted<br>
 document should be publishable as-is, as plain text, without looking<br>
@@ -940,7 +1081,8 @@ look like *emphasis*. Markdown lists look like, well, lists. Even<br>
 blockquotes look like quoted passages of text, assuming you've ever<br>
 used email.</p>
 <h3 id="html">
-<a id="inline-html" class="anchor" href="#inline-html" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inline HTML</h3>
+<a id="inline-html" class="anchor" href="#inline-html" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inline HTML</h3>
 <p>Markdown's syntax is intended for one purpose: to be used as a<br>
 format for <em>writing</em> for the web.</p>
 <p>Markdown is not a replacement for HTML, or even close to it. Its<br>
@@ -982,7 +1124,8 @@ link or image syntax, go right ahead.</p>
 <p>Unlike block-level HTML tags, Markdown syntax <em>is</em> processed within<br>
 span-level tags.</p>
 <h3 id="autoescape">
-<a id="automatic-escaping-for-special-characters" class="anchor" href="#automatic-escaping-for-special-characters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Automatic Escaping for Special Characters</h3>
+<a id="automatic-escaping-for-special-characters" class="anchor" href="#automatic-escaping-for-special-characters" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automatic Escaping for Special Characters</h3>
 <p>In HTML, there are two characters that demand special treatment: <code>&lt;</code><br>
 and <code>&amp;</code>. Left angle brackets are used to start tags; ampersands are<br>
 used to denote HTML entities. If you want to use them as literal<br>
@@ -1027,9 +1170,11 @@ terrible format for writing about HTML syntax, because every single <code>&lt;</
 and <code>&amp;</code> in your example code needs to be escaped.)</p>
 <hr>
 <h2 id="block">
-<a id="block-elements" class="anchor" href="#block-elements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Block Elements</h2>
+<a id="block-elements" class="anchor" href="#block-elements" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Block Elements</h2>
 <h3 id="p">
-<a id="paragraphs-and-line-breaks" class="anchor" href="#paragraphs-and-line-breaks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Paragraphs and Line Breaks</h3>
+<a id="paragraphs-and-line-breaks" class="anchor" href="#paragraphs-and-line-breaks" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paragraphs and Line Breaks</h3>
 <p>A paragraph is simply one or more consecutive lines of text, separated<br>
 by one or more blank lines. (A blank line is any line that looks like a<br>
 blank line -- a line containing nothing but spaces or tabs is considered<br>
@@ -1046,7 +1191,8 @@ end a line with two or more spaces, then type return.</p>
 Markdown's email-style <a href="#blockquote">blockquoting</a> and multi-paragraph <a href="#list">list items</a><br>
 work best -- and look better -- when you format them with hard breaks.</p>
 <h3 id="header">
-<a id="headers" class="anchor" href="#headers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Headers</h3>
+<a id="headers" class="anchor" href="#headers" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Headers</h3>
 <p>Markdown supports two styles of headers, [Setext] <a href="http://docutils.sourceforge.net/mirror/setext.html">1</a> and [atx] <a href="http://www.aaronsw.com/2002/atx/">2</a>.</p>
 <p>Setext-style headers are "underlined" using equal signs (for first-level<br>
 headers) and dashes (for second-level headers). For example:</p>
@@ -1077,7 +1223,8 @@ determines the header level.) :</p>
 ### This is an H3 ######
 </code></pre>
 <h3 id="blockquote">
-<a id="blockquotes" class="anchor" href="#blockquotes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Blockquotes</h3>
+<a id="blockquotes" class="anchor" href="#blockquotes" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Blockquotes</h3>
 <p>Markdown uses email-style <code>&gt;</code> characters for blockquoting. If you're<br>
 familiar with quoting passages of text in an email message, then you<br>
 know how to create a blockquote in Markdown. It looks best if you hard<br>
@@ -1121,7 +1268,8 @@ and code blocks:</p>
 example, with BBEdit, you can make a selection and choose Increase<br>
 Quote Level from the Text menu.</p>
 <h3 id="list">
-<a id="lists" class="anchor" href="#lists" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lists</h3>
+<a id="lists" class="anchor" href="#lists" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lists</h3>
 <p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>
 <p>Unordered lists use asterisks, pluses, and hyphens -- interchangably<br>
 -- as list markers:</p>
@@ -1255,7 +1403,8 @@ line. To avoid this, you can backslash-escape the period:</p>
 <pre><code>1986\. What a great season.
 </code></pre>
 <h3 id="precode">
-<a id="code-blocks" class="anchor" href="#code-blocks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Blocks</h3>
+<a id="code-blocks" class="anchor" href="#code-blocks" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Blocks</h3>
 <p>Pre-formatted code blocks are used for writing about programming or<br>
 markup source code. Rather than forming normal paragraphs, the lines<br>
 of a code block are interpreted literally. Markdown wraps a code block<br>
@@ -1309,7 +1458,8 @@ ampersands and angle brackets. For example, this:</p>
 asterisks are just literal asterisks within a code block. This means<br>
 it's also easy to use Markdown to write about Markdown's own syntax.</p>
 <h3 id="hr">
-<a id="horizontal-rules" class="anchor" href="#horizontal-rules" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Horizontal Rules</h3>
+<a id="horizontal-rules" class="anchor" href="#horizontal-rules" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Horizontal Rules</h3>
 <p>You can produce a horizontal rule tag (<code>&lt;hr /&gt;</code>) by placing three or<br>
 more hyphens, asterisks, or underscores on a line by themselves. If you<br>
 wish, you may use spaces between the hyphens or asterisks. Each of the<br>
@@ -1326,9 +1476,11 @@ following lines will produce a horizontal rule:</p>
 </code></pre>
 <hr>
 <h2 id="span">
-<a id="span-elements" class="anchor" href="#span-elements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Span Elements</h2>
+<a id="span-elements" class="anchor" href="#span-elements" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Span Elements</h2>
 <h3 id="link">
-<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h3>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Links</h3>
 <p>Markdown supports two style of links: <em>inline</em> and <em>reference</em>.</p>
 <p>In both styles, the link text is delimited by [square brackets].</p>
 <p>To create an inline link, use a set of regular parentheses immediately<br>
@@ -1456,7 +1608,8 @@ allowing you to move the markup-related metadata out of the paragraph,<br>
 you can add links without interrupting the narrative flow of your<br>
 prose.</p>
 <h3 id="em">
-<a id="emphasis" class="anchor" href="#emphasis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Emphasis</h3>
+<a id="emphasis" class="anchor" href="#emphasis" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emphasis</h3>
 <p>Markdown treats asterisks (<code>*</code>) and underscores (<code>_</code>) as indicators of<br>
 emphasis. Text wrapped with one <code>*</code> or <code>_</code> will be wrapped with an<br>
 HTML <code>&lt;em&gt;</code> tag; double <code>*</code>'s or <code>_</code>'s will be wrapped with an HTML<br>
@@ -1491,7 +1644,8 @@ escape it:</p>
 <pre><code>\*this text is surrounded by literal asterisks\*
 </code></pre>
 <h3 id="code">
-<a id="code" class="anchor" href="#code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code</h3>
+<a id="code" class="anchor" href="#code" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code</h3>
 <p>To indicate a span of code, wrap it with backtick quotes (<code>`</code>).<br>
 Unlike a pre-formatted code block, a code span indicates code within a<br>
 normal paragraph. For example:</p>
@@ -1535,7 +1689,8 @@ tags. Markdown will turn this:</p>
 equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;
 </code></pre>
 <h3 id="img">
-<a id="images" class="anchor" href="#images" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Images</h3>
+<a id="images" class="anchor" href="#images" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Images</h3>
 <p>Admittedly, it's fairly difficult to devise a "natural" syntax for<br>
 placing images into a plain text document format.</p>
 <p>Markdown uses an image syntax that is intended to resemble the syntax<br>
@@ -1566,9 +1721,11 @@ dimensions of an image; if this is important to you, you can simply<br>
 use regular HTML <code>&lt;img&gt;</code> tags.</p>
 <hr>
 <h2 id="misc">
-<a id="miscellaneous" class="anchor" href="#miscellaneous" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Miscellaneous</h2>
+<a id="miscellaneous" class="anchor" href="#miscellaneous" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Miscellaneous</h2>
 <h3 id="autolink">
-<a id="automatic-links" class="anchor" href="#automatic-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Automatic Links</h3>
+<a id="automatic-links" class="anchor" href="#automatic-links" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automatic Links</h3>
 <p>Markdown supports a shortcut style for creating "automatic" links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to show the actual text of a URL or email address, and also have it be a clickable link, you can do this:</p>
 <pre><code>&lt;http://example.com/&gt;
 </code></pre>
@@ -1593,7 +1750,8 @@ most, address-harvesting bots, but it definitely won't fool all of<br>
 them. It's better than nothing, but an address published in this way<br>
 will probably eventually start receiving spam.)</p>
 <h3 id="backslash">
-<a id="backslash-escapes" class="anchor" href="#backslash-escapes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Backslash Escapes</h3>
+<a id="backslash-escapes" class="anchor" href="#backslash-escapes" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
+      3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Backslash Escapes</h3>
 <p>Markdown allows you to use backslash escapes to generate literal<br>
 characters which would otherwise have special meaning in Markdown's<br>
 formatting syntax. For example, if you wanted to surround a word<br>
