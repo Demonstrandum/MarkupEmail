@@ -1,5 +1,8 @@
+# Markdown E-mails :email:
+Send pretty e-mails :love_letter:
+
 Markdown: Syntax
-================
+----------------
 
 A quote
 > Quote
