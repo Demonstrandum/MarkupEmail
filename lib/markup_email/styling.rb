@@ -5,6 +5,10 @@ module MarkupEmail
 
       github_css = Net::HTTP.get(URI.parse("https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"))
       document.at_css('head') << <<-HTML
+        <link rel="shortcut icon" href="https://user-images.githubusercontent.com/26842759/28286954-7d4e4b02-6b29-11e7-97d6-ca223344f755.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://user-images.githubusercontent.com/26842759/28287052-c6288b08-6b29-11e7-8915-c60bc7b17b7d.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://user-images.githubusercontent.com/26842759/28287062-ca8f0fb4-6b29-11e7-945f-31486a537b01.png">
+
         <style>
           #{github_css}
           .c1,.cd,.cm,.cs,.markdown-body .c {
