@@ -72,15 +72,17 @@ end
 title = ARGV[ARGV.index('-t') + 1] unless ARGV.index('-t').nil?
 title = ARGV[ARGV.index('--title') + 1] unless ARGV.index('--title').nil?
 title = String.new if title.nil?
-puts "\nFilename and title not set,\na logical filename shall be chosen for you.\nPerhaps see `--help` for information." if title.empty?
+puts "\n\e[0;90;49mFilename and title not set,\na logical filename shall be chosen for you.\nPerhaps see `--help` for information.\e[0m" if title.empty?
 puts "\nTitle is    : #{title}\nFilename is : #{title}.html\n" unless title.empty?
 
 if sanitize
   puts "\nMarkup/HTML will be sanitized,\n(`class="..."` attributes and <script> tags will be disalowed)."
 else
-  puts "\nMarkup/HTML will NOT be sanitized, this might be dangerous!\nType `--help` fore more information."
+  puts "\n\e[0;33;49mMarkup/HTML will NOT be sanitized, this might be dangerous!\nType `--help` fore more information.\e[0m"
 end
 puts
 
 filename = title.empty? ? String.new : "#{title}.html"
-MarkupEmail::Convert.new(file, title, sanitize).write filename
+puts "Generating..."
+htmlFile = MarkupEmail::Convert.new(file, title, sanitize).write filename
+puts "Done, \"#{htmlFile}\" has been generated.\n "
