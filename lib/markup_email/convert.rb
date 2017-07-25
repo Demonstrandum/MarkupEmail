@@ -48,7 +48,9 @@ module MarkupEmail
         puts "`#{package}` not installed for you chosen markup!\nSee `--help` for more information on installing the package."
         exit 1
       else
-        return "`#{package}` installed!"
+        puts "`#{package}` installed!"
+      ensure
+        nil
       end
     end
 
@@ -70,7 +72,7 @@ module MarkupEmail
         return true
       end
       if File.extname(@file) == '.creole'
-        require_test 'org-ruby'
+        require_test 'creole'
         return true
       end
       if %w(.mediawiki .wiki).include? File.extname(@file)
@@ -81,7 +83,7 @@ module MarkupEmail
         begin
           %x(python3 --version)
         rescue
-          puts "python3 (Python version 3) not installed, please install python3!"
+          puts "python3 (Python version 3) not installed, please install `python3`!"
           exit 1
         end
         unless %x(python3 -c "import sphinx" 2>&1).empty?
