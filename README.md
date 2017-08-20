@@ -54,7 +54,8 @@ Markup/HTML will be sanitized,
 Then open `examples/veryExampleWow.html` in your browser and see for yourself, then you can open it in a text-editor, view the source and copy it in to your e-mail editor as `HTML` source.
 
 ## Add custom styling
-Create a file named either: `.markup-email.css`, `.email.css`, `.markup.css` or `.markdown.css`.
+Create a file named either: `.markup-email.css`, `.email.css`, `.markup.css` or `.markdown.css`
+in your home directory (`~`) edit it with an editor, e.g. vim: `vim ~/email.css`
 
 Add your custom css for your email in either one of these files.
 
