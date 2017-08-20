@@ -3,6 +3,15 @@ module MarkupEmail
     def self.github_md content
       document = Nokogiri::HTML(content)
 
+      custom_css = String.new
+      css_files = %w{ .markup-email.css .email.css .markup.css .markdown.css }
+      css_files.each do |css_file|
+        if File.file? "#{File.expand_path '~'}/#{css_file}"
+          custom_css = File.read "#{File.expand_path '~' }/#{css_file}"
+          break
+        end
+      end
+
       github_css = Net::HTTP.get(URI.parse("https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"))
       document.at_css('head') << <<-HTML
         <link rel="shortcut icon" href="https://user-images.githubusercontent.com/26842759/28286954-7d4e4b02-6b29-11e7-97d6-ca223344f755.png">
@@ -173,6 +182,12 @@ module MarkupEmail
             border: none !important;
           }
         </style>
+
+        <!-- User custom style overide -->
+        <style>
+          #{custom_css}
+        </style>
+
       HTML
       document.to_s.gsub("<span aria-hidden=\"true\" class=\"octicon octicon-link\"></span>", "<svg aria-hidden=\"true\" class=\"octicon octicon-link\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0
       3-1.69 3-3.5S14.5 6 13 6z\"></path></svg>")
