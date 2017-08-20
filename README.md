@@ -4,7 +4,7 @@
 ## Installation
 From [rubygems.org](https://rubygems.org/gems/markup-email)
 ```shell
-gem install markup-email
+gem install markup-email --no-ri --no-rdoc
 # Then use the executables
 markup-email [file] [options]
 ```
@@ -56,18 +56,22 @@ Then open `examples/veryExampleWow.html` in your browser and see for yourself, t
 ## Add custom styling
 Create a file named either: `.markup-email.css`, `.email.css`, `.markup.css` or `.markdown.css`.
 
-Add your custom css for your email in wither one of these files.
+Add your custom css for your email in either one of these files.
 
 e.g.
 ```css
-body { width: 600px; }/* As opposed to 980px */
+body { width: 600px; } /* As opposed to 980px */
 
-article {
+article, .markdown-body {
   border-radius: 0; /* 5px */
-  box-shadow: none; /* 0 10px 50px rgba(0, 0, 0, 0.2) */
   padding: 20px;    /* 45px */
 }
+
+.markdown-body:first-child {
+  box-shadow: none; /* 0 10px 50px rgba(0, 0, 0, 0.2) */
+}
 ```
+Inspect the email/site in the browser to prototype and learn about how to style it.
 
 ## In Ruby
 *Can* also be used in Ruby
