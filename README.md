@@ -55,7 +55,7 @@ Then open `examples/veryExampleWow.html` in your browser and see for yourself, t
 
 ## Add custom styling
 Create a file named either: `.markup-email.css`, `.email.css`, `.markup.css` or `.markdown.css`
-in your home directory (`~`) edit it with an editor, e.g. vim: `vim ~/email.css`
+in your home directory (`~`) edit it with an editor, e.g. vim: `vim ~/.email.css`
 
 Add your custom css for your email in either one of these files.
 
