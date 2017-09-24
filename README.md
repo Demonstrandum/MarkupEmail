@@ -79,13 +79,13 @@ Inspect the email/site in the browser to prototype and learn about how to style 
 ```ruby
 require 'markup_email'
 
-file = ... # Markup file
-title = ... # Title of the page
+file = '~/emails/hello.md' # Markup file path
+title = 'Hello, World' # Title of the email
 
 markup = MarkupEmail::Convert.new(file, title, sanitize)
 puts markup.content # Will print the pure HTML
 
-markup.write "#{file.split('.')[0..-2].join('.')}-converted.html" # Makes a new file
+markup.write "#{File.dirname file}/#{File.basename(file).split('.')[0..-2].join('.')}-converted.html" # Makes a new file
 # If `file` was equal to "hello.there.md"
 # then the new file from `markup.write()` would be called
 # "hello.there-converted.html"
